@@ -39,6 +39,7 @@ h1 {
   font-family: 'MechTech', sans-serif;
   font-weight: 400;
   font-size: 3em;
+  text-align: center;
 }
 ul {
   list-style: none;
@@ -122,4 +123,8 @@ li img {
 li iframe {
   width: 100%;
   min-height: 50vh;
+}
+
+#intro {
+    text-align: center;
 }
