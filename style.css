@@ -134,3 +134,8 @@ li iframe {
     font-size: large;
     color: darkseagreen;
 }
+
+a.clickable {
+    color: crimson;
+    font-weight: bold;
+}
