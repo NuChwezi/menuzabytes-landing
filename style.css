@@ -141,3 +141,31 @@ a.clickable {
     color: crimson;
     font-weight: bold;
 }
+
+table#qrcodes {
+    width: 100%;
+}
+table#qrcodes th {
+    font-family: serif;
+    font-weight: bold;
+    background: blue;
+    color: white;
+    padding: 5px;
+}
+
+
+table#qrcodes th.lbl-install {
+    background: blue;
+    color: white;
+}
+
+
+table#qrcodes th.lbl-know {
+    background: crimson;
+    color: white;
+}
+
+img.imqrc {
+    padding: 5px;
+    width: 100%;
+}
