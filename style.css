@@ -1,171 +1,232 @@
-@font-face {
-  font-family: 'MechTech';
-  font-style: normal;
-  font-weight: bold;
-  src: url(fonts/MechTechBold.woff) format('woff');
-}
-
-@font-face {
-  font-family: 'MechTech';
-  font-style: normal;
-  src: url(fonts/MechTech.woff) format('woff');
-}
 * {
-  box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
-a {
-  text-decoration: none;
-  color: inherit;
-}
-p {
-  font-size: 1.1em;
-  margin: 1em 0;
-}
-.description {
-  margin: 1em auto 2.25em;
-}
-html {
-  overflow-x: hidden;
-}
+
 body {
-  width: 60vw;
-  margin: 1.5em auto;
-  color: #333;
-  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/dot-grid.png");
-}
-h1 {
-  font-family: 'MechTech', sans-serif;
-  font-weight: 400;
-  font-size: 3em;
-  text-align: center;
-}
-ul {
-  list-style: none;
-  padding: 0;
-}
-ul .inner {
-  padding-left: 1em;
-  overflow: hidden;
-  display: none;
-}
-ul .inner.show {
-  /*display: block;*/
-}
-ul li {
-  margin: 0.5em 0;
-}
-ul li a.toggle {
-  width: 100%;
-  display: block;
-  background: rgba(0, 0, 0, 0.78);
-  color: #fefefe;
-  padding: 0.75em;
-  border-radius: 0.15em;
-  transition: background 0.3s ease;
-}
-ul li a.toggle:hover {
-  background: rgba(0, 0, 0, 0.9);
-}
-.menu_a {
-  font-weight: bold;
-  background-color: #E15E32 !important;
-}
-.menu_b {
-  background-color: #E6E3DA !important;
-  color: gray !important;
-  font-weight: bold;
-}
-.menu_c {
-  font-weight: bold;
-  background-color: #003640 !important;
-}
-.menu_d {
-  font-weight: bold;
-  background-color: #3FB8AF !important;
-}
-#bg {
-  background-size: cover;
-  background-attachment: local;
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: -1;
-}
-.bg-fade {
-  background-color: rgba(255, 255, 255, 0.597);
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: 0;
-}
-ul li {
-  background: floralwhite;
-}
-div.logo img {
-  position: relative;
-  margin: auto;
-  margin-bottom: 5px;
-  width: 100%;
-  height: auto;
-  text-align: center;
-  border-radius: 0.15em;
-  box-shadow: rgba(20,20,20,.3) 0px 4px;
-}
-li img {
-  width: 95%;
-  height: auto;
-  padding: 5%;
-}
-li iframe {
-  width: 100%;
-  min-height: 50vh;
+	background: #eee;
+	font-family: "Helvetica Neue", sans-serif;
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
 }
 
-#intro {
+/* Website Header */
+.header {
+	text-align: center;
+	font-weight: 300;
+	font-size: 30px;
+	color: #009688;
+	margin: 50px;
+  font-weight: bold;
+}
+
+.header small{
+	text-align: center;
+	font-weight: 300;
+	font-size: 15px;
+	color: #999;
+	margin: 50px;
+}
+
+/* Watch Container */
+.watch-container {
+	width: 300px;
+	margin: 50px auto;
+}
+
+/* Watch */
+.watch {
+	position: relative;
+	width: 300px;
+	height: 300px;
+}
+
+/* Watch Face */
+.watch-face {
+	width: 300px;
+	height: 300px;
+	border-radius: 100%;
+	background: #3F484A; /* Dial colour */
+	border: 10px solid silver; /* Face border */
+	box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5), 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+	
+	/* Watch Face Outline */
+	.watch-face-outline {}
+
+	.watch-face-outline-point {
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		background: #777;
+		left: 145px;
+		top: 24px;
+		border-radius: 100%;
+		-webkit-transform-origin: 50% 126px;
+		transform-origin: 50% 126px;
+	}
+
+	.point-12 { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+	.point-1 { -webkit-transform: rotate(30deg); transform: rotate(30deg); }
+	.point-2 { -webkit-transform: rotate(60deg); transform: rotate(60deg); }
+	.point-3 { -webkit-transform: rotate(90deg); transform: rotate(90deg); }
+	.point-4 { -webkit-transform: rotate(120deg); transform: rotate(120deg); }
+	.point-5 { -webkit-transform: rotate(150deg); transform: rotate(150deg); }
+	.point-6 { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+	.point-7 { -webkit-transform: rotate(210deg); transform: rotate(210deg); }
+	.point-8 { -webkit-transform: rotate(240deg); transform: rotate(240deg); }
+	.point-9 { -webkit-transform: rotate(270deg); transform: rotate(270deg); }
+	.point-10 { -webkit-transform: rotate(300deg); transform: rotate(300deg); }
+	.point-11 { -webkit-transform: rotate(330deg); transform: rotate(330deg); }
+
+	/* Watch Face Date */
+	.watch-face-date {
+    position: absolute;
+		background-color: rgba(0,0,0,0.1);
+    width: 27px;
+    height: 27px;
+    border-radius: 100%;
     text-align: center;
+		top: 138px;
+		right: 50px;
+		font-size: 15px;
+    line-height: 27px;
+		color: #aaa;
+		font-weight: 300;
+	}
+
+	/* Watch Face Center */
+	.watch-face-centre {
+		position: absolute;
+		width: 12px;
+		height: 12px;
+		top: 144px;
+		left: 144px;
+		border-radius: 100%;
+		background: #fff;
+	}
+
+	.watch-face-centre-inner {
+		position: absolute;
+		z-index: 1;
+		width: 8px;
+		height: 8px;
+		top: 2px;
+		left: 2px;
+		border-radius: 100%;
+		background: #333;
+		border: 2px solid #fa9f22;
+	}
+
+	/* Watch Face Hands */
+	.watch-face-hands {}
+
+	.watch-face-hand {
+		position: absolute;
+	}
+
+	.watch-face-hand.hour {
+		width: 4px;
+		height: 60px;
+		top: 90px;
+		left: 148px;
+		border-radius: 10px;
+		background: #fff;
+		-webkit-transform-origin: 50% 100%;
+		transform-origin: 50% 100%;
+		-webkit-transform: rotate(306deg);
+		transform: rotate(306deg);
+	}
+
+	.watch-face-hand.minute {
+		width: 4px;
+		height: 120px;
+		top: 30px;
+		left: 148px;
+		border-radius: 10px;
+		background: #fff;
+		-webkit-transform-origin: 50% 100%;
+		transform-origin: 50% 100%;
+		-webkit-transform: rotate(50deg);
+		transform: rotate(50deg);
+	}
+	
+	.watch-face-hand.second {
+		width: 2px;
+		height: 145px;
+		top: 20px;
+		left: 149px;
+		border-radius: 10px;
+		background: #fa9f22;
+		-webkit-transform-origin: 50% 130px;
+		transform-origin: 50% 130px;
+		-webkit-transform: rotate(180deg);
+		transform: rotate(180deg);
+	}
+
+/* Watch Crown */
+.watch-crown {
+	position: relative;
+	z-index: -1;
+	width: 15px;
+	height: 26px;
+	top: -163px;
+	left: 295px;
+	border-radius: 5px;
+	background: #999;
+	border-right: 2px solid rgba(0, 0, 0, 0.05);
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-#notices {
-    font-weight: bold;
-    font-size: large;
-    color: darkseagreen;
+/* Watch Straps */
+.watch-strap-top {
+	position: relative;
+	z-index: -1;
+	width: 120px;
+	height: 150px;
+	left: 90px;
+	bottom: -20px;
+	background: #785734;
+	border-radius: 10px 10px 0 0;
 }
 
-a.clickable {
-    color: crimson;
-    font-weight: bold;
+.watch-strap-bottom {
+	position: relative;
+	z-index: -1;
+	width: 120px;
+	height: 150px;
+	left: 90px;
+	bottom: 20px;
+	background: #785734;
+	border-radius: 0 0 10px 10px;
+	color: rgba(255, 255, 255, 0.4);
+	font-weight: bold;
+	text-align: center;
+	padding-top: 120px;
+	text-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
-table#qrcodes {
-    width: 100%;
-}
-table#qrcodes th {
-    font-family: serif;
-    font-weight: bold;
-    background: blue;
-    color: white;
-    padding: 5px;
+/* Website Footer */
+.footer {
+	text-align: center;
+	font-weight: 400;
+	font-size: 14px;
+	color: #999;
+	margin: 50px;
 }
 
-
-table#qrcodes th.lbl-install {
-    background: blue;
-    color: white;
+.footer a {
+	color: #999;
+	font-weight: 500;
+	text-decoration: none;
 }
 
-
-table#qrcodes th.lbl-know {
-    background: crimson;
-    color: white;
-}
-
-img.imqrc {
-    padding: 5px;
-    width: 100%;
+.footer a:hover {
+	text-decoration: underline;
 }
