@@ -1,25 +1,13 @@
-$(document).ready(function() {
-	function watch() {
-		// Get the time
-		var now = new Date();
-		var time = now.getHours() * 3600 +
-					    now.getMinutes() * 60 +
-					    now.getSeconds() * 1 +
-					    now.getMilliseconds() / 1000;
+tl = gsap.timeline();
+tl.set(".fire, .smoke", {visibility:"hidden"});
+tl.to(".candle", {y:160, duration: 20, stagger:3, delay:1, ease: "sine"},"<");
+tl.to(".stick", {height:65, duration: 20, stagger:3, ease: "sine"}, "<");
+tl.set(".fire", {visibility:"visible", stagger:3 },"<");
+tl.set(".fire", {visibility:"hidden", stagger:3 }, "-=9");
+tl.set(".smoke", {visibility:"visible", stagger:3}, "-=9");
+tl.set(".smoke", {visibility:"hidden", delay:.5, stagger:3}, "-=7.5");
 
-		// Change the time into degrees
-		var hours = time / 60 / 12 * 6;
-		var minutes = time / 60 * 6;
-		var seconds = time * 6;
-		var date = now.getDate();
 
-		// Modify classes
-		$('.hour').css('transform', 'rotate(' + hours + 'deg)');
-		$('.minute').css('transform', 'rotate(' + minutes + 'deg)');
-		$('.second').css('transform', 'rotate(' + seconds + 'deg)');
-		$('.date').html(date);
-	}
-
-	// Get new time every 50ms
-	setInterval(watch, 50);
+$(".toggleMenu").on('click', function(){
+  $("#mainMenu").toggleClass('open');
 });
