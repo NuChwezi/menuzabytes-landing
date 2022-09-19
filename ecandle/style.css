@@ -1,95 +1,245 @@
-@import url('https://fonts.googleapis.com/css2?family=Flamenco:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700,700i');
+
+
+*, *:before, *:after {
+	margin: 0;
+	padding: 0;
+	word-break: break-all;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 10px;
+}
 
 body {
-  padding: 1em;
-  margin: 0;
-  height: 100vh;
+	font-family: 'Ubuntu', sans-serif;
+	color: #6e6e6e;
+	font-size: 1.6rem;
+  background: black;
+}
+
+header, footer {
+  display: block;
+}
+
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+img {
+	border: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+.center {
+  width: 1170px;
+  margin: 20px auto 0;
+}
+
+.holder {
+  margin: 12rem auto 0;
+  width: 150px;
+  height: 400px;
+  position: relative;
+}
+
+.holder *, .holder *:before, .holder *:after {
+  position: absolute;
+  content: "";
+}
+
+.candle {
+  bottom: 0;
+  width: 150px;
+  height: 300px;
+  border-radius: 150px / 40px;
+  box-shadow: inset 20px -30px 50px 0 rgba(0, 0, 0, 0.4), inset -20px 0 50px 0 rgba(0, 0, 0, 0.4);
+  background: #190f02;
+  background: -moz-linear-gradient(#e48825, #e78e0e, #833c03, #4c1a03 50%, #1c0900);
+  background: -webkit-linear-gradient(#e48825, #e78e0e, #833c03, #4c1a03 50%, #1c0900);
+  background: -o-linear-gradient(#e48825, #e78e0e, #833c03, #4c1a03 50%, #1c0900);
+  background: -ms-linear-gradient(#e48825, #e78e0e, #833c03, #4c1a03 50%, #1c0900);
+  background: linear-gradient(#e48825, #e78e0e, #833c03, #4c1a03 50%, #1c0900);
+}
+
+.candle:before {
   width: 100%;
-  background-color: #1d1a1a;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  flex-direction: column;
-  box-sizing: border-box;
-  font-family: 'Flamenco', cursive;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #d47401;
+  background: #b86409;
+  background: -moz-radial-gradient(#eaa121, #8e4901 45%, #b86409 80%);
+  background: -webkit-radial-gradient(#eaa121, #8e4901 45%, #b86409 80%);
+  background: -o-radial-gradient(#eaa121, #8e4901 45%, #b86409 80%);
+  background: -ms-radial-gradient(#eaa121, #8e4901 45%, #b86409 80%);
+  background: radial-gradient(#ffef80, #b86409 60%);
+  background: radial-gradient(#eaa121, #8e4901 45%, #b86409 80%);
 }
 
-@font-face {
-  font-family: 'MechTech';
-  font-style: normal;
-  font-weight: bold;
-  src: url(fonts/MechTechBold.woff) format('woff');
+.candle:after {
+  width: 34px;
+  height: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  top: 14px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  background: -moz-radial-gradient(rgba(0, 0, 0, 0.6), transparent 45%);
+  background: -webkit-radial-gradient(rgba(0, 0, 0, 0.6), transparent 45%);
+  background: -o-radial-gradient(rgba(0, 0, 0, 0.6), transparent 45%);
+  background: -ms-radial-gradient(rgba(0, 0, 0, 0.6), transparent 45%);
+  background: radial-gradient(rgba(0, 0, 0, 0.6), transparent 45%);
 }
 
-@font-face {
-  font-family: 'MechTech';
-  font-style: normal;
-  src: url(fonts/MechTech.woff) format('woff');
+.thread {  
+  width: 6px;
+  height: 36px;
+  top: -17px;
+  left: 50%;
+  z-index: 1;
+  border-radius: 40% 40% 0 0;
+  transform: translateX(-50%);
+  background: #121212;
+  background: -moz-linear-gradient(#d6994a, #4b232c, #121212, black, #e8bb31 90%);
+  background: -webkit-linear-gradient(#d6994a, #4b232c, #121212, black, #e8bb31 90%);
+  background: -o-linear-gradient(#d6994a, #4b232c, #121212, black, #e8bb31 90%);
+  background: -ms-linear-gradient(#d6994a, #4b232c, #121212, black, #e8bb31 90%);
+  background: linear-gradient(#d6994a, #4b232c, #121212, black, #e8bb31 90%);
 }
 
-@font-face {
-  font-family: 'Flavors';
-  font-style: normal;
-  src: url(fonts/Flavors-Regular.woff) format('woff');
+.flame {
+  width: 24px;
+  height: 120px;
+  left: 50%;
+  transform-origin: 50% 100%;
+  transform: translateX(-50%);
+  bottom: 100%;
+  border-radius: 50% 50% 20% 20%;
+  background: rgba(255, 255, 255, 1);
+  background: -moz-linear-gradient(white 80%, transparent);
+  background: -webkit-linear-gradient(white 80%, transparent);
+  background: -o-linear-gradient(white 80%, transparent);
+  background: -ms-linear-gradient(white 80%, transparent);
+  background: linear-gradient(white 80%, transparent);
+  animation: moveFlame 6s linear infinite, enlargeFlame 5s linear infinite;
 }
 
-
-
-svg {
-  width: 80%;
-  height: 80%;
-  perspective: 1000;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+.flame:before {
+  width: 100%;
+  height: 100%;
+  border-radius: 50% 50% 20% 20%;
+  box-shadow: 0 0 15px 0 rgba(247, 93, 0, .4), 0 -6px 4px 0 rgba(247, 128, 0, .7);
 }
 
-h1 {
-  font-family: 'MechTech', sans-serif;
-  font-weight: 400;
-  font-size: 3em;
-  text-align: center;
-  color: white;
+@keyframes moveFlame {
+  0%, 100% {
+    transform: translateX(-50%) rotate(-2deg);
+  }
+  50% {
+    transform: translateX(-50%) rotate(2deg);
+  }
 }
 
-h3 {
-  font-size: 2em;
-  text-align: center;
-  color: white;
-  letter-spacing: 0.3em;
+@keyframes enlargeFlame {
+  0%, 100% {
+    height: 120px;
+  }
+  50% {
+    height: 140px;
+  }
 }
 
-h3 .brand {
-  font-family: 'Flavors', sans-serif;
-color: #ff5722;
+.glow {
+  width: 26px;
+  height: 60px;
+  border-radius: 50% 50% 35% 35%;
+  left: 50%;
+  top: -48px;
+  transform: translateX(-50%);
+  background: rgba(0, 133, 255, .7);
+  box-shadow: 0 -40px 30px 0 #dc8a0c, 0 40px 50px 0 #dc8a0c, inset 3px 0 2px 0 rgba(0, 133, 255, .6), inset -3px 0 2px 0 rgba(0, 133, 255, .6);
 }
 
-.message {
-  fill: wheat !important;
+.glow:before {
+  width: 70%;
+  height: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.35);
 }
 
-.footer {
-  font-family: monospace;
-  color: white;
-	text-align: center;
-    margin-bottom: 4em;
+.blinking-blow {
+  width: 100px;
+  height: 180px;
+  left: 50%;
+  top: -55%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: #ff6000;
+  -webkit-filter: blur(50px);
+  -moz-filter: blur(60px);
+  -o-filter: blur(60px);
+  -ms-filter: blur(60px);
+  filter: blur(60px);
+  animation: blinkIt .1s infinite;
 }
 
-rect.st0.stick.first {
-  fill: crimson;
+@keyframes blinkIt {
+  50% { opacity: .8;}
 }
 
-rect.st0.stick.second {
-  fill: yellow;
+.anyag {
+  background: orange;
+  position: relative;
+  border-radius: 60%;
+  height: 10px;
+  width: 500px;
+  left: 20%;
+  filter: blur(20px);
+  z-index: -1;
+}
+.anyag2 {
+  display: block;
+  background: red;
+  position: relative;
+  height: 20px;
+  width: 500px;
+  left: 20%;
+  filter: blur(50px);
+  z-index: -1;
+  opacity: .7;
+  border-radius: 50%;
+}
+.shadow {
+  position: absolute;
+  width: 500px;
+  height: 60px;
+  left: 10%;
+  top: 475px;
+  background: black;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: .9;
+  filter: blur(50px);
+  border: 10px solid orange;
 }
 
-rect.st0.stick.third {
-  fill: darkorchid;
+.icon {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  height: 100vh;
 }
 
-rect.st0.stick.fourth {
-  fill: white;
-}
 
 /* begin nav */
 
@@ -130,7 +280,7 @@ rect.st0.stick.fourth {
 .mainMenuOverlay .toggleMenu {
   display: block;
   /*background: url(https://res.cloudinary.com/dioieuprs/image/upload/v1466688705/floating-menu/sandwich.png) no-repeat center center #65B5D0;background-size: 23px auto;*/
-  background-color: #4caf50;
+  background-color: #2c1106;
   border: 1px solid #FFF;
   border-radius: 80px;
   width: 62px;
@@ -150,7 +300,7 @@ rect.st0.stick.fourth {
 
 .mainMenuOverlay.open .toggleMenu {
   top: 50%;
-  background-color: #4caf50;
+  background-color: #2c1106;
 }
 
 .mainMenuOverlay .itemMenuBox {
@@ -344,39 +494,3 @@ rect.st0.stick.fourth {
 
 
 /* end nav */
-
-.st0 {
-  fill: #FFFFFF;
-  stroke: #000000;
-  stroke-width: 4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 10;
-}
-
-.st1 {
-  fill: none;
-  stroke: #9e9e9e;
-  stroke-width: 4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 10;
-}
-
-.smoke {
-  stroke-dasharray: 1 5 4 7 2 6;
-  stroke-dashoffset: 0;
-  animation: burn 7s linear infinite reverse;
-}
-
-@keyframes burn {
-  100% {
-    stroke-dashoffset: 65;
-  }
-}
-
-.intro {
-    color: ghostwhite;
-    font-size: large;
-    text-align: center;
-}
