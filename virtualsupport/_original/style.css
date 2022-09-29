@@ -1,0 +1,171 @@
+@font-face {
+  font-family: 'MechTech';
+  font-style: normal;
+  font-weight: bold;
+  src: url(fonts/MechTechBold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'MechTech';
+  font-style: normal;
+  src: url(fonts/MechTech.woff) format('woff');
+}
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+p {
+  font-size: 1.1em;
+  margin: 1em 0;
+}
+.description {
+  margin: 1em auto 2.25em;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  width: 60vw;
+  margin: 1.5em auto;
+  color: #333;
+  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/dot-grid.png");
+}
+h1 {
+  font-family: 'MechTech', sans-serif;
+  font-weight: 400;
+  font-size: 3em;
+  text-align: center;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul .inner {
+  padding-left: 1em;
+  overflow: hidden;
+  display: none;
+}
+ul .inner.show {
+  /*display: block;*/
+}
+ul li {
+  margin: 0.5em 0;
+}
+ul li a.toggle {
+  width: 100%;
+  display: block;
+  background: rgba(0, 0, 0, 0.78);
+  color: #fefefe;
+  padding: 0.75em;
+  border-radius: 0.15em;
+  transition: background 0.3s ease;
+}
+ul li a.toggle:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+.menu_a {
+  font-weight: bold;
+  background-color: #E15E32 !important;
+}
+.menu_b {
+  background-color: #E6E3DA !important;
+  color: gray !important;
+  font-weight: bold;
+}
+.menu_c {
+  font-weight: bold;
+  background-color: #003640 !important;
+}
+.menu_d {
+  font-weight: bold;
+  background-color: #3FB8AF !important;
+}
+#bg {
+  background-size: cover;
+  background-attachment: local;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+.bg-fade {
+  background-color: rgba(255, 255, 255, 0.597);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+}
+ul li {
+  background: floralwhite;
+}
+div.logo img {
+  position: relative;
+  margin: auto;
+  margin-bottom: 5px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  border-radius: 0.15em;
+  box-shadow: rgba(20,20,20,.3) 0px 4px;
+}
+li img {
+  width: 95%;
+  height: auto;
+  padding: 5%;
+}
+li iframe {
+  width: 100%;
+  min-height: 50vh;
+}
+
+#intro {
+    text-align: center;
+}
+
+#notices {
+    font-weight: bold;
+    font-size: large;
+    color: darkseagreen;
+}
+
+a.clickable {
+    color: crimson;
+    font-weight: bold;
+}
+
+table#qrcodes {
+    width: 100%;
+}
+table#qrcodes th {
+    font-family: serif;
+    font-weight: bold;
+    background: blue;
+    color: white;
+    padding: 5px;
+}
+
+
+table#qrcodes th.lbl-install {
+    background: blue;
+    color: white;
+}
+
+
+table#qrcodes th.lbl-know {
+    background: crimson;
+    color: white;
+}
+
+img.imqrc {
+    padding: 5px;
+    width: 100%;
+}
