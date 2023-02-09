@@ -59,9 +59,12 @@ h3 {
   letter-spacing: 0.3em;
 }
 
-h3 .brand {
+h3 .brand , h3 a.brand, h3 .brand a{
   font-family: 'Flavors', sans-serif;
-color: #ff5722;
+    /*color: #ff5722; */
+    color: #36ff22;
+    text-decoration: overline;
+    line-height: 3;
 }
 
 .message {
