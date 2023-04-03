@@ -384,3 +384,7 @@ rect.st0.stick.fourth {
     text-align: center;
     font-family:math;
 }
+
+.highlights {
+    color: mediumvioletred;
+}
