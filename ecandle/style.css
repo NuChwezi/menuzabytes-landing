@@ -252,6 +252,8 @@ ul {
   top: -50px;
   right: -130px;
   transition: right 0.2s ease;
+  /* hide this: not needed anymore */
+  visibility: hidden;
 }
 
 .mainMenuOverlay.open .navire {
@@ -261,7 +263,8 @@ ul {
 
 /* ### main Menu Overlay */
 .mainMenuOverlay {
-  background-color: rgba(195, 34, 34, .84);
+  /*background-color: rgba(195, 34, 34, .84);*/
+  background-color: rgba(0, 150, 136,.84);
   position: fixed;
   left: 0;
   right: 0;
